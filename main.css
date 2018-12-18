@@ -1,0 +1,214 @@
+@import url('https://fonts.googleapis.com/css?family=Alegreya+Sans+SC|Muli:300');
+@import url('https://fonts.googleapis.com/css?family=PT+Sans');
+@import url('https://fonts.googleapis.com/css?family=Quicksand:400,500,700');
+
+section {
+  padding: 0px 20px;
+}
+
+* {
+  /* color: #F9FAFC; */
+  font-family: 'Quicksand', sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background-color: #1F2D3D;
+}
+
+#main-todo-app {
+  color: #F9FAFC;
+  font-size: 22px;
+  font-weight: 200;
+  flex-basis: 60%;
+}
+
+h1 {
+  display: inline-block;
+  font-family: 'Quicksand', sans-serif;
+  font-size: 4em;
+  color: #E5E9F2;
+  font-weight: 700;
+  margin-top: 10px;
+}
+
+h2 {
+  display: inline-block;
+  font-family: 'Quicksand', sans-serif;
+  font-size: 2em;
+  color: #E5E9F2;
+  font-weight: 700;
+  margin-left: 30px;
+  margin-top: 10px;
+}
+
+.shortcuts li {
+  margin: 0em;
+  padding: 0;
+  list-style-type: none;
+}
+.shortcuts ul {
+  margin: 0;
+  padding: 0;
+}
+
+.small {
+  font-size: 0.75em;
+}
+
+.bold {
+  font-weight: bold;
+}
+
+.todos {
+  outline: none;
+  min-width: 1200px;
+}
+
+.button {
+  display: inline-block;
+  margin-right: 10px;
+  color: #FF7849;
+  width: 13.5px;
+
+}
+
+.app-header-section {
+  margin-left: 30px;
+  margin-bottom: 20px;
+  padding-bottom: 20px;
+  border-bottom: solid 1px #3C4858;
+}
+
+.app-button:first-of-type {
+  margin-left: 50px;
+}
+
+.app-button {
+
+  border: solid 2px #FF7849;
+  background-color: #FF7849;
+  padding: 7px;
+  border-radius: 10px;
+  font-size: 1.0em;
+  font-weight: 500;
+  text-decoration: none;
+  margin-left: 10px;
+  color: #F9FAFC;
+  font-family: 'Quicksand', sans-serif;
+}
+
+.app-button:hover {
+  text-decoration: none;
+  cursor: pointer;
+  border: solid 2px #1FB6FF;
+  background-color: #1FB6FF;
+}
+
+.app-button:active {
+  border: solid 2px #3C4858;
+  background-color: #3C4858;
+}
+
+.app-button:focus {
+  outline: 0;
+}
+
+.secondaryText {
+  font-family: 'PT Sans', sans-serif;
+  outline: none;
+  font-size: 0.7em;
+  color: #1FB6FF;
+  margin-left: 46px;
+}
+
+.expander {
+  opacity: 0;
+  margin-left: 2px;
+  margin-right: 5px;
+  width:15px;
+  color: #29EB7F;
+  font-weight: bold;
+  transition: opacity .1s ease-in-out;
+}
+
+.has-subtodos {
+  color: #29EB7F;
+  font-size: 0.6em;
+  margin: auto;
+  margin-right: 10px;
+}
+
+.inline-flex:hover .show {
+  opacity: 1;
+  cursor: pointer;
+}
+
+li {
+  outline: none;
+  margin-top: 0.5em;
+}
+
+ul {
+  list-style-type: none;
+  list-style-position: inside;
+  margin: 0.5em;
+  margin-left: 26.5px;
+  padding-left: 9px;
+  border-left: solid 2px #273444;
+}
+
+ul:first-child{
+  border: none;
+}
+
+.completed {
+  text-decoration: line-through;
+  color: #3C4858;
+}
+
+.grey {
+  color: #3C4858;
+}
+
+.hidden {
+  display: none;
+}
+
+.flexbox {
+  display: flex;
+}
+
+.flex70 {
+  width: 70%;
+}
+
+.flex30 {
+  width: 30%;
+}
+
+.inline-flex {
+  display: inline-flex;
+}
+
+.hide {
+  opacity: 0;
+}
+
+#shortcutUL {
+  margin-left: 12px;
+  padding: 0px;
+  list-style-type: none
+}
+
+.shortcutLi {
+  outline: none;
+  font-size: 1.2em;
+  color: #1FB6FF;
+  font-family: 'Quicksand', sans-serif;
+}
+
+.greenShortcut {
+  color: #29EB7F;
+  font-family: 'Quicksand', sans-serif;
+  font-weight: bold;
+}

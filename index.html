@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <title>Nested TODO</title>
+  <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+
+</head>
+<body>
+  <div class='flexbox'>
+    <div class=flex70>
+      <section>
+        <div class="app-header-section" id='header-section'>
+          <h1>Todo List</h1>
+          <button class="app-button" id="clear-completed">Clear Completed</button>
+          <button class="app-button" id="clear-all">Clear All</span>
+          <button class="app-button" id="toggle-shortcuts">Toggle Shortcuts</button>
+        </div>
+      </section>
+      <section id="main-todo-app">
+      </section>
+    </div>
+
+    <div class="flex30" id="shortcuts">
+      <h2>
+        Shortcuts
+      </h2>
+      <section>
+        <ul id="shortcutUL">
+          <li class="shortcutLi"><span class="greenShortcut">Enter </span>New todo</li>
+          <li class="shortcutLi"><span class="greenShortcut">Shift + Enter </span>Go to secondary text</li>
+          <li class="shortcutLi"><span class="greenShortcut">Ctrl + Enter </span>Complete todo</li>
+          <li class="shortcutLi"><span class="greenShortcut">Tab </span>Indent todo</li>
+          <li class="shortcutLi"><span class="greenShortcut">Shift + Tab </span>Outdent todo</li>
+        </ul>
+      </section>
+    </div>
+  </div>
+</body>
+</html>
+<script src="nestedTODO.js"></script>
