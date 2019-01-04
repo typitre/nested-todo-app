@@ -1,13 +1,8 @@
-/* eslint linebreak-style: ["error", "windows"] */
-/* eslint func-names: ["error", "never"]*/
-
 /*
 
 TODO: Can press enter and split the text into two todos.
 TODO: Drag and drop.
 TODO: Replace button and +/- text with images.
-
-BUG: Tabbing into a todo that is compelted.
 
 */
 
@@ -459,8 +454,30 @@ var nestedTodo = {
     var searchObject = this.findTodoUsingID(id);
     searchObject.todo.completed = !searchObject.todo.completed;
 
-    // Recursion to set higherLevelCompleted for subTodos.
-    this.toggleHigherLevelCompleted(searchObject.todo, searchObject.todo.completed);
+    // Set higherLevelCompleted for subTodos.
+
+    // Recurse up the chain of todos, searching for any .completed property set to true.
+    // Return true if found, otherwise return false.
+
+    function recursiveSearchForCompleted(searchObject) {
+      if (searchObject.todo.completed === true) {
+        return true;
+      }
+
+      var aboveSearchObject = nestedTodo.findTodoUsingID(searchObject.parentObject.id);
+
+      // Check to see if you have reached the top most level of todos, which would make searchObject undefined.
+      if (aboveSearchObject === undefined) {
+        return false;
+      } else {
+        return recursiveSearchForCompleted(aboveSearchObject);
+      }
+    }
+
+    var state = recursiveSearchForCompleted(searchObject);
+
+    // Set subtodos completed status, render, set focus.
+    this.toggleHigherLevelCompleted(searchObject.todo, state);
     this.render();
     var focusId = this.returnPrevOrNextTodoId(id, 'next');
     if (focusId === undefined) {
